@@ -1,0 +1,15 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = Joe Whitfield-Seed
+	email = "(none)"
+[push]
+	default = simple
+[alias]
+	which-branch = rev-parse --abbrev-ref HEAD
+	aaaargghhhhh = reflog
+	wdiff = diff --color-words
+	prune-branches = !git remote prune origin && git branch --merged | fgrep -v \"*\" | fgrep -v "master" | xargs git branch -d
+[core]
+	editor = /usr/bin/vim
