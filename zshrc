@@ -19,6 +19,10 @@ export CLICOLOR=1
 
 # Misc aliases
 alias TODO="find . -type f | xargs fgrep 'TODO'"
+alias l="ls"
+alias la="ls -a"
+alias ll="ls -l"
+alias ltr="ls -ltra"
 
 # Git aliases
 alias gut="git"
