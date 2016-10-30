@@ -18,22 +18,56 @@ Plugin 'gmarik/Vundle.vim'
 " # Plugins
 
 " # Files
+
+" Fuzzy file finding
 Plugin 'kien/ctrlp.vim'
+
+" Git integration
 Plugin 'tpope/vim-fugitive'
 
 " # Code
-" Plugin 'scrooloose/syntastic'
+
+" Syntax highlighting
+Plugin 'scrooloose/syntastic'
+
+" JS code analysis
+Plugin 'ternjs/tern_for_vim'
+
+" Better JS syntax
+Plugin 'pangloss/vim-javascript'
+
+" Code completion
+Plugin 'Valloric/YouCompleteMe'
+
+" Insert/delete quote/bracket pairs
+Plugin 'jiangmiao/auto-pairs'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+" Plugin 'tomasr/molokai'
+Plugin 'crusoexia/vim-monokai'
 
 " UI
+" Fancy status line
 Plugin 'bling/vim-airline'
+
+" Code search with ack
 Plugin 'mileszs/ack.vim'
 
+" File manager
+Plugin 'scrooloose/nerdtree'
+
+" Syntax
 Plugin 'lambdatoast/elm.vim'
 Plugin 'vim-scripts/VimClojure'
+Plugin 'alunny/pegjs-vim'
+Plugin 'andreimaxim/vim-io'
+Plugin 'adimit/prolog.vim'
+
+""""""" Trying out
+
+" Auto-indent on paste
+" Plugin 'ConradIrwin/vim-bracketed-paster'
 
 " # End plugins
 " #################
@@ -71,6 +105,12 @@ filetype plugin indent on
 " Show line numbers
 set number
 
+" use relative line numbers
+set relativenumber
+
+" Show the cursor line
+set cursorline
+
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
@@ -86,12 +126,18 @@ set hidden
 " Find patterns
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
+" Set pwd to the current file's director
+set autochdir
+
 " Status line
 " #####################################
 " # Keybindings
 
 " \rr to re-source .vimrc
 map <leader>rr :source ~/.vimrc<CR>
+
+" ctrl-N for NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " #####################################
 " # Appearance
@@ -100,15 +146,15 @@ syntax enable
 set laststatus=2	" Always show status bar
 
 if has('gui_running')
-    colorscheme molokai
+    colorscheme monokai
     set background=dark
 else
-    colorscheme molokai
+    colorscheme monokai
     set background=dark
 endif
 
-"set guifont=Source\ Code\ Pro\ For\ Powerline
-set guifont=Inconsolata\ For\ Powerline:h13
+set guifont=Source\ Code\ Pro\ For\ Powerline
+" set guifont=Inconsolata\ For\ Powerline:h13
 
 
 " #####################################
@@ -136,6 +182,8 @@ let g:airline_powerline_fonts = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
