@@ -4,6 +4,10 @@ PATH=~/bin:$PATH
 PATH=~/scripts:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/apache/bin/:$PATH
+PATH=~/software/phantomjs-2.1.1-macosx/bin/:$PATH
+
+export EDITOR="mvim -v"
+set -o emacs
 
 ulimit -n 10000
 
@@ -23,6 +27,8 @@ alias l="ls"
 alias la="ls -a"
 alias ll="ls -l"
 alias ltr="ls -ltra"
+alias vi="mvim -v"
+alias vim="vi"
 
 # Git aliases
 alias gut="git"
@@ -38,8 +44,27 @@ fpath=(~/.zsh $fpath)
 autoload -U promptinit && promptinit
 prompt pure
 
+## vi mode: disabled for now because I got impatient
+## show vi mode - credit https://github.com/sindresorhus/pure/wiki
+# bindkey -v
+# export KEYTIMEOUT=1
+# PROMPT='%(?.%F{magenta}.%F{red})${${KEYMAP/vicmd/❮%f}/(main|viins)/❯%f} '
+# function zle-line-init zle-keymap-select {
+#    zle reset-prompt
+#
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+
 # completion
 autoload -U compinit && compinit
+
+# 
+# Expansion
+# 
+
+# expand camelcase-style dirs
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # misc options
 setopt auto_cd
@@ -66,6 +91,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-export NVM_DIR="/Users/joe/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-#nvm use 0.10
+# apps and stuff
+# reasonml
+eval $(opam config env)
