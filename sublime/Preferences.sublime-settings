@@ -3,9 +3,8 @@
 	"auto_indent": true,
 	"binary_file_patterns":
 	[
-		"compiled.js",
-		"bundle.js",
-		"app-bundle.js",
+		"*compiled.js",
+		"*bundle.js",
 		"templates.js"
 	],
 	"bold_folder_labels": true,
@@ -46,7 +45,8 @@
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"*-bundle.js"
 	],
 	"font_size": 11,
 	"gpu_window_buffer": true,
