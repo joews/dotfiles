@@ -48,6 +48,7 @@
 		"CVS",
 		"*-bundle.js"
 	],
+	"font_face": "Source Code Pro",
 	"font_size": 11,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
