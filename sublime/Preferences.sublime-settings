@@ -64,6 +64,7 @@
 		"draw_active"
 	],
 	"margin": 2,
+	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"smart_indent": true,
