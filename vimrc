@@ -163,7 +163,7 @@ else
     set background=dark
 endif
 
-set guifont=Source\ Code\ Pro\ For\ Powerline
+set guifont=Source\ Code\ Pro\ For\ Powerline:h11
 " set guifont=Inconsolata\ For\ Powerline:h13
 
 
