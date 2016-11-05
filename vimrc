@@ -129,6 +129,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 " Set pwd to the current file's director
 set autochdir
 
+" No bell!
+set vb
+
 " Status line
 " #####################################
 " # Keybindings
