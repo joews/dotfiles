@@ -142,6 +142,13 @@ map <leader>rr :source ~/.vimrc<CR>
 " ctrl-N for NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" ctrl-[hjk] for navigating splits
+nnoremap <C-J> <C-W><C-J> 
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
 " #####################################
 " # Appearance
 syntax on
