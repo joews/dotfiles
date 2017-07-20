@@ -23,7 +23,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 
 " Git integration
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 
 " # Code
 
@@ -37,7 +37,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 
 " Code completion
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Insert/delete quote/bracket pairs
 Plugin 'jiangmiao/auto-pairs'
@@ -52,7 +52,7 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'bling/vim-airline'
 
 " Code search with ack
-Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
 
 " File manager
 Plugin 'scrooloose/nerdtree'
@@ -61,8 +61,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'vim-scripts/VimClojure'
 Plugin 'alunny/pegjs-vim'
-Plugin 'andreimaxim/vim-io'
-Plugin 'adimit/prolog.vim'
+" Plugin 'andreimaxim/vim-io'
+" Plugin 'adimit/prolog.vim'
 
 """"""" Trying out
 
