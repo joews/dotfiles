@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"ApacheConf.tmLanguage",
 		"Babel",
 		"C++11",
 		"Color Highlighter",
@@ -19,6 +20,7 @@
 		"HTML5",
 		"HTMLBeautify",
 		"IDL-Syntax",
+		"Indent XML",
 		"JavaScript & NodeJS Snippets",
 		"JsFormat",
 		"JSONLint",
@@ -26,10 +28,12 @@
 		"Local History",
 		"Markdown Preview",
 		"Monokai JSON+",
+		"OCaml",
 		"Package Control",
 		"PEG.js",
 		"Pretty JSON",
 		"Prolog",
+		"Racket",
 		"Sass",
 		"Snake",
 		"SublimeLinter",
