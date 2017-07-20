@@ -12,7 +12,7 @@
 	wdiff = diff --color-words
 	prune-branches = !git remote prune origin && git branch --merged | fgrep -v \"*\" | fgrep -v "master" | xargs git branch -d
   add-chunks = add -p
-  amend = commit -a --amend
+  amend = commit --amend
   master = checkout master
   who = shortlog -sn
   staged = diff --staged
