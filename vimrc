@@ -27,8 +27,8 @@ Plugin 'tpope/vim-fugitive'
 
 " # Code
 
-" Syntax highlighting
-Plugin 'scrooloose/syntastic'
+" Linting
+Plugin 'w0rp/ale'
 
 " JS code analysis
 Plugin 'ternjs/tern_for_vim'
@@ -188,15 +188,17 @@ let g:ctrlp_custom_ignore = 'node_modules\|tmp'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" ALE
+set statusline+=$#warningmsg#
+set statusline+=%{ALEGetStatusLine()}
 
-let b:syntastic_checkers = ['standard']
-autocmd FileType javascript let b:syntastic_javascript_standard_exec = '`npm bin`/standard' 
+let g:ale_sign_column_always = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+" #############################################################################
+" # Custom behaviour
+
+" strip trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
