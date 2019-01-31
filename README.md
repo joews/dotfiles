@@ -21,4 +21,4 @@ Enable [JS completion](https://github.com/Valloric/YouCompleteMe#javascript-sema
 
 Install Pure prompt
 
-     ❯ npm install -g pure 
+     ❯ npm install -g pure-prompt
