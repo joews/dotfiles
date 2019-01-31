@@ -93,4 +93,4 @@ HISTFILE=~/.zsh_history
 
 # apps and stuff
 # reasonml
-eval $(opam config env)
+# eval $(opam config env)
