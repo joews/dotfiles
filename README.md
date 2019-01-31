@@ -8,6 +8,13 @@
 
 ### Macvim
 
+
+    ❯ brew install macvim
+
+Install [Vundle](https://github.com/VundleVim/Vundle.vim#quick-start) and install plugins:
+
+    :PluginInstall
+
 Install patched powerline font:
 
     ❯  wget https://github.com/powerline/fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf
@@ -26,4 +33,4 @@ Install Pure prompt
 Install https://github.com/zsh-users/zsh-syntax-highlighting
 
     ❯ brew install zsh-syntax-highlighting
-    
+
