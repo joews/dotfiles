@@ -21,4 +21,9 @@ Enable [JS completion](https://github.com/Valloric/YouCompleteMe#javascript-sema
 
 Install Pure prompt
 
-     ❯ npm install -g pure-prompt
+    ❯ npm install -g pure-prompt
+
+Install https://github.com/zsh-users/zsh-syntax-highlighting
+
+    ❯ brew install zsh-syntax-highlighting
+    

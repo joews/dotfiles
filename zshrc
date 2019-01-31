@@ -94,3 +94,7 @@ HISTFILE=~/.zsh_history
 # apps and stuff
 # reasonml
 # eval $(opam config env)
+
+# zsh-syntax-highlighting
+# This plugin must be loaded last - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
