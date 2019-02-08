@@ -3,7 +3,7 @@
 	smudge = git-media-smudge %f
 [user]
 	name = Joe Whitfield-Seed
-	email = "(none)"
+	email = "joe.ws@ripjar.com"
 [push]
 	default = simple
 [alias]
@@ -13,6 +13,7 @@
 	prune-branches = !git remote prune origin && git branch --merged | fgrep -v \"*\" | fgrep -v "master" | xargs git branch -d
   add-chunks = add -p
   amend = commit --amend
+  ane = commit --amend --no-edit
   master = checkout master
   who = shortlog -sn
   staged = diff --staged
