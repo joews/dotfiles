@@ -1,0 +1,29 @@
+{
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true,
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": true },
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-e>"],
+      "commands": [
+        {
+          "command": "cursorEnd"
+        }
+      ]
+    },
+    {
+      "before": ["<C-a>"],
+      "commands": [
+        {
+          "command": "cursorHome"
+        }
+      ]
+    }
+  ]
+}

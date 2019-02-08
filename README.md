@@ -24,6 +24,16 @@ Tell iTerm 2 to use the powerline for for non-ASCII characters: Edit profile; Te
 
 Enable [JS completion](https://github.com/Valloric/YouCompleteMe#javascript-semantic-completion) for YouCompleteMe.
 
+### VSCode
+
+_Only edit `settings.json` inside Code__. Changes made outside can be overwritte by Code.
+
+```
+cd ~/Library/Application Support/Code/User
+mv settings.json{.old}
+ln -s ~/code/dotfiles/vscode/settings.json .
+```
+
 ### zsh
 
 Install Pure prompt
