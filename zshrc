@@ -13,7 +13,7 @@ ulimit -n 10000
 
 # Include paths
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
-export CXXFLAGS=-I/usr/local/include 
+export CXXFLAGS=-I/usr/local/include
 export LDFLAGS=-L/usr/local/lib
 
 # Make delete delete-right instead of inserting ~
@@ -59,9 +59,9 @@ prompt pure
 # completion
 autoload -U compinit && compinit
 
-# 
+#
 # Expansion
-# 
+#
 
 # expand camelcase-style dirs
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
@@ -91,7 +91,15 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# apps and stuff
+#
+# Dev environment setup
+#
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # reasonml
 # eval $(opam config env)
 
