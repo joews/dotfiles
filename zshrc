@@ -5,6 +5,10 @@ PATH=~/scripts:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/apache/bin/:$PATH
 PATH=~/software/phantomjs-2.1.1-macosx/bin/:$PATH
+PATH=~/software/consul/consul-1.6.1/:$PATH
+PATH=~/software/gradle/bin:$PATH
+PATH=~/software/mongodb/bin:$PATH
+PATH=~/software/maven/bin:$PATH
 
 export EDITOR="mvim -v"
 set -o emacs
@@ -15,6 +19,11 @@ ulimit -n 10000
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
 export CXXFLAGS=-I/usr/local/include
 export LDFLAGS=-L/usr/local/lib
+
+# Java
+JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/
+JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+export JAVA_HOME=$JAVA_8_HOME
 
 # Make delete delete-right instead of inserting ~
 bindkey "^[[3~" delete-char
@@ -106,3 +115,10 @@ export NVM_DIR="$HOME/.nvm"
 # zsh-syntax-highlighting
 # This plugin must be loaded last - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+alias rscp='rsync --rsync-path="sudo -u ripjar rsync"'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
