@@ -2,9 +2,21 @@
 
 ## Setup
 
-### Sublime
+### zsh
 
-    ❯ ln -s sublime ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sublime
+    ❯ ln -s ./zshrc ~/.zshrc
+
+Install Pure prompt
+
+    ❯ brew install pure
+
+Install https://github.com/zsh-users/zsh-syntax-highlighting
+
+    ❯ brew install zsh-syntax-highlighting
+
+### git
+
+     ❯ ln -s ./gitconfig ~/.gitconfig
 
 ### Macvim
 
@@ -23,24 +35,3 @@ Install patched powerline font:
 Tell iTerm 2 to use the powerline for for non-ASCII characters: Edit profile; Text tab; Set _Non-ASCII Font_ to Inconsolata for Powerline
 
 Enable [JS completion](https://github.com/Valloric/YouCompleteMe#javascript-semantic-completion) for YouCompleteMe.
-
-### VSCode
-
-_Only edit `settings.json` inside Code__. Changes made outside can be overwritte by Code.
-
-```
-cd ~/Library/Application Support/Code/User
-mv settings.json{.old}
-ln -s ~/code/dotfiles/vscode/settings.json .
-```
-
-### zsh
-
-Install Pure prompt
-
-    ❯ npm install -g pure-prompt
-
-Install https://github.com/zsh-users/zsh-syntax-highlighting
-
-    ❯ brew install zsh-syntax-highlighting
-
